@@ -1,9 +1,11 @@
 /**
- * check_specifiers - check if the charecter is a valid specifier
- * @format: the spicifier
+ * check_specifier - check that charecter is a valid specifier and
+ * assigns an appropriate function for its printing.
+ * @format: the specifier (char*)
  *
  * Return: pointer to function
  */
+
 int (*check_specifier(char *format))(va_list)
 {
 	int i;
@@ -21,7 +23,6 @@ int (*check_specifier(char *format))(va_list)
 			return (my_array[i].f);
 		}
 	}
-	
 
 	return (NULL);
 }
