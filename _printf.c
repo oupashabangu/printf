@@ -5,7 +5,8 @@
 
 /**
  * _printf - produces output according to a format
- * @format: format string
+ * @format: format string to print
+ * @...: variadic parameters (unknown)
  *
  * Return: number of charectors printed
  */
@@ -33,10 +34,16 @@ int _printf(const char *format, ...)
 
 		if (format[i] == '%')
 		{
-
+			f = check_specifier(&format[i + 1]);
+			if (f != NULL)
+			{
+				value = f(args);
+				count =  count + value;
+				i = i + 2;
+				continue;
+			}
 		}
 	}
 
 	return (count);
 }
-
