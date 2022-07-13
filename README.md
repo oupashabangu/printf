@@ -1,2 +1,2 @@
 
-printf - prints characters
+printf.c - prints characters
