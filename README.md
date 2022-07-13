@@ -1,2 +1,2 @@
 
-printf.c - prints characters
+main.h -  file that includes prototypes
